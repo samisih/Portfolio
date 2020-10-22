@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+#bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#header {
+  font-size: 4em;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: #ccc 3px 5px 5px;
+  padding-top: 25%;
+  margin-left: 15%;
+  color: #fff;
+  z-index: 2;
+}
+
+.home {
+  top: 5%;
+  left: 2%;
+}
+
+nav#social {
+  position: fixed;
+  bottom: 45%;
+  left: 2%;
+}
+
+nav#social ul li {
+  list-style-type: none;
+}
+
+a {
+  color: silver;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px black;
+  z-index: 3;
+}
+
+a:hover {
+  color: #adadad;
+  text-decoration: none;
+}
+
+a.angle {
+  position: relative;
+  bottom: -30%;
+}
+
+a i.fa-angle-double-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: animate 2s infinite;
+  color: silver;
+  text-decoration: none;
+  text-shadow: 3px 2px 4px black;
+}
+
+.v-line {
+  border-top: 3px solid #333;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  background: #ccc;
+}
+
+section#about {
+  background: url("./images/cave.webp") no-repeat top center/cover;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+section#about .angle {
+  bottom: -10%;
+}
+
+section#skills {
+  position: relative;
+  background: #adadad;
+  background: radial-gradient(circle, #adadad 0%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#adadad", endColorstr="#000000", GradientType=1);
+  object-fit: contain;
+  height: 100vh;
+}
+
+section#skills .content {
+  padding: 7%;
+}
+
+section#skills #cv {
+  margin: auto;
+  margin-top: 2%;
+  max-width: 30%;
+}
+
+section#skills #cv img {
+  background: url("images/CV_eng.png");
+  width: 100%;
+  object-fit: contain;
+  mask-image: rgba(0, 0, 0, 0.2);
+}
+
+section#skills #cv img:hover {
+  opacity: 0.5;
+  transform: scale(0.974);
+}
+
+section#skills #cv .layer {
+  position: relative;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+section#skills a.btn {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  margin: 2% 0;
+  padding: 2% 10%;
+  width: 100%;
+  z-index: 1;
+}
+
+section#skills a.btn:hover {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+}
+
+section#skills .angle {
+  bottom: -10% !important;
+}
+
+section#projects {
+  height: 100vh;
+  width: 100%;
+}
+
+section#projects .wrapper {
+  padding: 2%;
+}
+
+section#projects h2 {
+  font-size: 3rem;
+  text-shadow: #333 2px 2px 2px;
+  text-transform: uppercase;
+  transform: translateY(-30px);
+}
+
+section#projects h2:nth-child(2) {
+  font-size: 3rem;
+  text-shadow: #333 2px 2px 2px;
+  text-transform: uppercase;
+  transform: translateY(50px);
+}
+
+section#projects .img-fluid {
+  padding: 2%;
+  margin: 12% 0;
+  height: 30vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+section#projects a {
+  color: #333;
+  text-shadow: none;
+}
+
+section#projects .v-line {
+  border-top: 3px solid #333;
+  margin: 5%;
+}
+
+section#projects .angle {
+  bottom: -20%;
+}
+
+section#gallery {
+  padding: 5% 0;
+  height: 100vh;
+  position: relative;
+  object-fit: contain;
+  background: #adadad;
+}
+
+section#gallery h2 {
+  font-size: 3rem;
+  text-shadow: #333 2px 2px 2px;
+  text-transform: uppercase;
+  transform: translateY(-50px);
+}
+
+section#gallery h2:nth-child(2) {
+  font-size: 2.4rem;
+  text-shadow: #333 2px 2px 2px;
+  text-transform: uppercase;
+  transform: translateY(50px);
+}
+
+section#gallery .box-1 {
+  height: 70vh;
+  padding: 3%;
+  position: relative;
+  background-image: linear-gradient(to right, #603813 0%, #b29f94 51%, #603813 100%);
+}
+
+section#gallery .angle {
+  bottom: -10% !important;
+}
+
+section#gallery img {
+  box-shadow: #333 4px 7px 20px;
+  object-fit: contain;
+}
+
+section#studies {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%), linear-gradient(180deg, #6100FF 0%, #000000 100%), linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%), linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
+  background-blend-mode: soft-light, screen, darken, normal;
+}
+
+section#studies .card {
+  background: linear-gradient(90deg, #f7f7f7 0%, #666 100%);
+  margin-top: 15%;
+  box-shadow: 13px 15px 224px #000;
+}
+
+section#studies ul {
+  list-style-type: none;
+}
+
+section#studies ul li {
+  padding: 2%;
+  font-size: 1.5rem;
+}
+
+section#studies .angle {
+  bottom: -30%;
+}
+
+section#contact {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+}
+
+section#contact .form-group {
+  flex: 1;
+  margin: auto;
+  width: 15%;
+  padding: 12px;
+  border: none;
+}
+
+section#contact .form-group #name {
+  width: 100%;
+}
+
+section#contact .form-group #email {
+  width: 100%;
+}
+
+section#contact .form-group textarea {
+  width: 100%;
+}
+
+section#contact .form-group #btn {
+  width: 100%;
+}
+
+section#contact img {
+  margin: 0 2%;
+  margin-top: 5%;
+  max-width: 100%;
+}
+
+section#contact .black.wrapper {
+  height: calc(100vh - 10%);
+  background-color: #000;
+  padding-top: 10%;
+}
+
+section#contact .black.wrapper .link {
+  position: relative;
+  max-width: 12%;
+  z-index: 1;
+}
+
+section#contact .black.wrapper .link:nth-child(1) {
+  width: 115%;
+}
+
+section#contact .black.wrapper .text-right {
+  float: right;
+  right: 6%;
+}
+
+section#contact .home {
+  top: 5%;
+  left: 2%;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-75px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

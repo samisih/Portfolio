@@ -29,14 +29,18 @@ body {
     z-index: 2;
 }
 
-.home {
+#home {
+    position: fixed;
+    display: block;
     top: 5%;
     left: 2%;
+    margin: 0;
+
 }
 
 nav#social {
     position: fixed;
-    bottom: 45%;
+    top: 45%;
     left: 2%;
 
     & ul li {
@@ -83,6 +87,13 @@ section {
     height: 100vh;
     width: 100%;
     background: #ccc;
+    background: rgb(173, 173, 173);
+    background: -moz-radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#adadad", endColorstr="#000000", GradientType=1);
+    object-fit: contain;
+
 
 
 
@@ -101,15 +112,13 @@ section {
     }
 
     &#skills {
-        position: relative;
-        background: rgb(173, 173, 173);
-        background: -moz-radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        background: -webkit-radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        background: radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#adadad", endColorstr="#000000", GradientType=1);
-        object-fit: contain;
-        height: 100vh;
 
+
+        & .block {
+            height: 100%;
+            width: 10vw;
+            transform: translateX(36deg);
+        }
 
         & .content {
             padding: 7%;
@@ -172,6 +181,12 @@ section {
     &#projects {
         height: 100vh;
         width: 100%;
+        background: rgb(173, 173, 173);
+        background: -moz-radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        background: radial-gradient(circle, rgba(173, 173, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#adadad", endColorstr="#000000", GradientType=1);
+        object-fit: contain;
 
         & .wrapper {
             padding: 2%;
@@ -241,9 +256,10 @@ section {
 
         & .box-1 {
             height: 70vh;
-            padding: 3%;
             position: relative;
-            background-image: linear-gradient(to right, #603813 0%, #b29f94 51%, #603813 100%);
+            background-image: linear-gradient(to left top, #b69677 0%, #603813 51%, #925a39 75%, #b29f94 100%);
+            background-blend-mode: lighten, soft-light;
+            animation: colorChange 12s infinite ease-in;
         }
 
         & .angle {
@@ -251,7 +267,7 @@ section {
         }
 
         & img {
-            box-shadow: #333 4px 7px 20px;
+            width: 150px;
             object-fit: contain;
         }
     }
@@ -259,19 +275,20 @@ section {
     &#studies {
         width: 100%;
         height: 100vh;
-        background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%),
-            linear-gradient(180deg, #6100FF 0%, #000000 100%),
-            linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%),
-            linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
+        background: linear-gradient(35deg, #FFFFFF 0%, #000F25 100%),
+            linear-gradient(235deg, #f7f7df 0%, #f7f7df 40%, #00043C calc(4% + 10px), #00043C 60%, #005D6C calc(6% + 10px), #005D6C 70%, #00C9B1 calc(7% + 10px), #00C9B1 100%),
+            linear-gradient(125deg, #f7f7df 0%, #f7f7df 40%, #00043C calc(4% + 10px), #00043C 60%, #005D6C calc(6% + 10px), #005D6C 70%, #00C9B1 calc(7% + 10px), #00C9B1 100%);
+        animation: colorChange 1s ease infinite;
         background-blend-mode: soft-light,
             screen,
             darken,
             normal;
+        z-index: -1;
 
         & .card {
             background: linear-gradient(90deg, #f7f7f7 0%, #666 100%);
-
-            margin-top: 15%;
+            transform: rotateY(40deg);
+            margin-top: 35%;
             box-shadow: 13px 15px 224px #000;
 
         }
@@ -287,7 +304,7 @@ section {
         }
 
         & .angle {
-            bottom: -30%;
+            bottom: -10%;
         }
 
 
@@ -356,10 +373,7 @@ section {
 
         }
 
-        & .home {
-            top: 5%;
-            left: 2%;
-        }
+
 
 
 
@@ -367,9 +381,19 @@ section {
 }
 
 
+@keyframes colorChange {
+    0% {
+        background-position: 0% 50%
+    }
 
+    50% {
+        background-position: 100% 50%
+    }
 
-
+    100% {
+        background-position: 0% 50%
+    }
+}
 
 @keyframes animate {
     0% {
