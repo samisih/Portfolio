@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,30 +26,11 @@
   
     <title>Dev Sam</title>
 </head>
-<body>
-
-<!-- Particles -->
-<!-- particles.js container -->
-
-
-
-<!-- End of Particles -->
-
-<!-- Home(about) section -->
-<section id="about">
-
-<h1 id="header">
-    Hi! I'm Sami
-     <br> <br>
-    &#60;Front-end&#47;UI developer&#62; <br>
-    &#60;desinger&#47;developer&#62;
-</h1>
-
- 
-<video src="./images/video.mp4" id="bg" type="video/mp4"autoplay="" muted=""
-loop="">
-</video>
-<nav id="social">
+<body> 
+  
+  <!-- Studies Section -->
+    <section id="studies">    
+        <nav id="social">
 <ul class="link">
       <li>
         <a href="https://twitter.com/SamiSihvonen2" target="_blank"><i
@@ -68,14 +49,51 @@ loop="">
         fa-github fa-3x"></i></a>
     </li>
   </ul>
-</nav>
-        <a href="skills.html" class="angle">
+</nav>     
+        <div class="container">     
+          <div class="row">
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h2>INFORMATION AND TECHNOLOGY STUDIES</h2>
+                  </div>
+                  <ul>
+                    <li>
+                    HTML/CSS/SASS @ Taitotalo, Udemy, FreeCodeCamp
+                    </li>
+                  <li>
+                    SQL-courses @ Taitotalo & AMKoodari+MOOC
+                  </li>
+                  <li>
+                    Java @ AMKoodari, MOOC
+                  </li>
+                  <li>
+                    JavaScript @ AMKoodari, MOOC, Udemy, FreeCodeCamp
+                  </li>       
+                  <li>
+                    HTML/CSS/JAVASCRIPT, TECHCLASS, METROPOLIA
+                  </li>       
+                  <li>
+                    2019 Tieto-ja-viestintatekniikan perusteet (5)ECTS
+                  </li>
+                  </ul>   
+                </div>
+              </div>
+            </div>     
+        </div>
+       </div> 
+         <a href="index.html" id="home">       
+        <i class="fas fa-home fa-3x"></i>
+      </a>
+        <a href="contact.html" class="angle">
         <i class="fas fa-angle-double-down fa-5x"></i>
       </a>
-<!-- </section> -->
-
+  </section>
+    <!-- End of studies section -->
+    <!-- End of skills page -->
+  
 <!-- Slick slider -->
-
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slider.js"></script>
@@ -109,5 +127,44 @@ loop="">
   }, false);
 
 </script>
-</body>
-</html>
+
+<script type="text/javascript">
+
+  // Original JavaScript code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
+
+  var rotateComplete = function() {
+    with(target.style) {
+      webkitAnimationName = MozAnimationName = msAnimationName = "";
+    }
+    target.insertBefore(arr[arr.length-1], arr[0]);
+    setTimeout(function(el) {
+      with(el.style) {
+        webkitAnimationName = MozAnimationName = msAnimationName = "rotator";
+      }
+    }, 0, target);
+  };
+
+  var target = document.getElementById("rotator");
+  var arr = target.getElementsByTagName("a");
+
+  target.addEventListener("webkitAnimationEnd", rotateComplete, false);
+  target.addEventListener("animationend", rotateComplete, false);
+  target.addEventListener("MSAnimationEnd", rotateComplete, false);
+
+</script>
+    <script>
+        // Smooth Scrolling
+        $('.btn').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top
+                    },
+                    600
+                );
+            }
+        });
+    </script>

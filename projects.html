@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+ 
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,28 +28,7 @@
     <title>Dev Sam</title>
 </head>
 <body>
-
-<!-- Particles -->
-<!-- particles.js container -->
-
-
-
-<!-- End of Particles -->
-
-<!-- Home(about) section -->
-<section id="about">
-
-<h1 id="header">
-    Hi! I'm Sami
-     <br> <br>
-    &#60;Front-end&#47;UI developer&#62; <br>
-    &#60;desinger&#47;developer&#62;
-</h1>
-
- 
-<video src="./images/video.mp4" id="bg" type="video/mp4"autoplay="" muted=""
-loop="">
-</video>
+<section id="projects">
 <nav id="social">
 <ul class="link">
       <li>
@@ -69,13 +49,57 @@ loop="">
     </li>
   </ul>
 </nav>
-        <a href="skills.html" class="angle">
+
+   <div class="wrapper"></div>
+      <div class="container">
+        <h2 class="text-center text-light">And my projects</h2>
+        <div class="v-line"></div>       
+          <h2 class="text-center text-light">more coming soon</h2>
+        <div class="row">          
+            <div class="col-md-4">
+            <div class="card-body card-img img-fluid"><a
+            href="drumkit/index.html"><img class="img-fluid"
+            src="images/drumkit.webp" alt=""><h3 class="card-title
+            text-center">Drumkit</h3>          
+          <p><b>Angela Yu's </b>lectures in Udemy's The complete 2020 Web development Bootcamp courses</p>
+        </a>
+      </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body card-img img-fluid"><a
+            href="colorflipper/index.html"><img class="img-fluid"
+            src="images/colorflipper.webp" alt=""><h3 class="card-title
+            text-center">Color Flipper</h3>
+            <p><a href="https://www.youtube.com/watch?v=PkZNo7MFNFg&t=23s"> Freecodecamp JavaScript</a> online course</p>
+          </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body card-img img-fluid">
+            <a href="https://airbnb-clone-5755d.web.app/"><img
+            src="images/Airbnb.webp" class="img-fluid" alt="airbnb clone"><h3
+            class="card-title text-center">Airbnb Clone</h3>
+              <p>Airbnb-clone build by <a href="https://www.youtube.com/watch?v=BtJeH_-XYaA">Clever Programmers</a> React For Beginners Course</p>
+          </a>
+            </div>
+          </div>
+          </div>
+          </div>
+   </div>
+           
+        <a href="gallery.html" class="angle"> 
         <i class="fas fa-angle-double-down fa-5x"></i>
       </a>
-<!-- </section> -->
+        <a href="index.html" id="home">       
+        <i class="fas fa-home fa-3x"></i>
+      </a>
+</section>
 
+
+
+
+  
 <!-- Slick slider -->
-
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slider.js"></script>
@@ -109,5 +133,46 @@ loop="">
   }, false);
 
 </script>
+
+<script type="text/javascript">
+
+  // Original JavaScript code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
+
+  var rotateComplete = function() {
+    with(target.style) {
+      webkitAnimationName = MozAnimationName = msAnimationName = "";
+    }
+    target.insertBefore(arr[arr.length-1], arr[0]);
+    setTimeout(function(el) {
+      with(el.style) {
+        webkitAnimationName = MozAnimationName = msAnimationName = "rotator";
+      }
+    }, 0, target);
+  };
+
+  var target = document.getElementById("rotator");
+  var arr = target.getElementsByTagName("a");
+
+  target.addEventListener("webkitAnimationEnd", rotateComplete, false);
+  target.addEventListener("animationend", rotateComplete, false);
+  target.addEventListener("MSAnimationEnd", rotateComplete, false);
+
+</script>
+    <script>
+        // Smooth Scrolling
+        $('.btn').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top
+                    },
+                    600
+                );
+            }
+        });
+    </script>
 </body>
 </html>
